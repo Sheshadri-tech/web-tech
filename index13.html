@@ -1,0 +1,150 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Solar System</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+
+/* Galaxy Background */
+background-image:url("https://www.pixelstalk.net/wp-content/uploads/image11/A-distant-galaxy-with-bright-blue-and-purple-hues-4K-space-wallpaper.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+overflow:hidden;
+font-family:sans-serif;
+}
+
+.space{
+position:relative;
+width:600px;
+height:600px;
+}
+
+/* SUN */
+
+.sun{
+position:absolute;
+top:50%;
+left:50%;
+width:100px;
+height:100px;
+
+background-image:url("https://pngimg.com/d/sun_PNG13424.png");
+background-size:contain;
+background-repeat:no-repeat;
+background-position:center;
+
+transform:translate(-50%,-50%);
+filter:drop-shadow(0 0 25px orange);
+}
+
+/* ORBITS */
+
+.orbit{
+position:absolute;
+top:50%;
+left:50%;
+border:2px solid rgba(255,210,120,0.6);
+border-radius:50%;
+transform:translate(-50%,-50%);
+animation:rotate linear infinite;
+}
+
+/* PLANETS */
+
+.planet{
+position:absolute;
+top:-6px;
+left:50%;
+transform:translateX(-50%);
+border-radius:50%;
+}
+
+/* PLANET COLORS */
+
+.mercury{width:8px;height:8px;background:#aaa;}
+.venus{width:10px;height:10px;background:#d6a76a;}
+.earth{width:11px;height:11px;background:#3fa9f5;}
+.mars{width:9px;height:9px;background:#ff5a36;}
+.jupiter{width:16px;height:16px;background:#d9b38c;}
+.saturn{width:14px;height:14px;background:#e5d29c;}
+.uranus{width:12px;height:12px;background:#9be3ff;}
+.neptune{width:12px;height:12px;background:#4169ff;}
+
+/* ORBIT SIZE + SPEED */
+
+.orbit1{width:120px;height:120px;animation-duration:5s;}
+.orbit2{width:160px;height:160px;animation-duration:7s;}
+.orbit3{width:200px;height:200px;animation-duration:10s;}
+.orbit4{width:240px;height:240px;animation-duration:14s;}
+.orbit5{width:280px;height:280px;animation-duration:20s;}
+.orbit6{width:320px;height:320px;animation-duration:26s;}
+.orbit7{width:360px;height:360px;animation-duration:32s;}
+.orbit8{width:400px;height:400px;animation-duration:40s;}
+
+/* ROTATION */
+
+@keyframes rotate{
+from{
+transform:translate(-50%,-50%) rotate(0deg);
+}
+to{
+transform:translate(-50%,-50%) rotate(360deg);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="space">
+
+<div class="sun"></div>
+
+<div class="orbit orbit1">
+<div class="planet mercury"></div>
+</div>
+
+<div class="orbit orbit2">
+<div class="planet venus"></div>
+</div>
+
+<div class="orbit orbit3">
+<div class="planet earth"></div>
+</div>
+
+<div class="orbit orbit4">
+<div class="planet mars"></div>
+</div>
+
+<div class="orbit orbit5">
+<div class="planet jupiter"></div>
+</div>
+
+<div class="orbit orbit6">
+<div class="planet saturn"></div>
+</div>
+
+<div class="orbit orbit7">
+<div class="planet uranus"></div>
+</div>
+
+<div class="orbit orbit8">
+<div class="planet neptune"></div>
+</div>
+
+</div>
+
+</body>
+</html>
