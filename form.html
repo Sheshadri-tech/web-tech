@@ -39,6 +39,17 @@
       outline: none;
     }
 
+    .checkbox {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+    }
+
+    .checkbox input {
+      width: auto;
+      margin-right: 10px;
+    }
+
     button {
       width: 100%;
       padding: 10px;
@@ -67,6 +78,12 @@
       <input type="tel" placeholder="Phone Number" required>
       <input type="email" placeholder="Email" required>
       <input type="password" placeholder="Password" required>
+
+      <div class="checkbox">
+        <input type="checkbox" id="terms" required>
+        <label for="terms">I agree to the Terms & Conditions</label>
+      </div>
+
       <button type="submit">Sign Up</button>
     </form>
   </div>
